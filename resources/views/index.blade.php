@@ -58,18 +58,19 @@
                         imaginations
                         come true.
                     </p>
-                    <a href="https://wa.me/6285702750455"/>
-                        <button class="button-primary me-1">Contact Us
-                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
-                                <path
-                                    d="M12.3567 1.69675C12.3567 1.28254 12.0209 0.946749 11.6067 0.946744L4.85673 0.946666C4.44252 0.946661 4.10673 1.28244 4.10672 1.69666C4.10672 2.11087 4.4425 2.44666 4.85671 2.44667L10.8567 2.44674L10.8566 8.44673C10.8566 8.86095 11.1924 9.19674 11.6066 9.19674C12.0209 9.19675 12.3566 8.86097 12.3566 8.44675L12.3567 1.69675ZM1.53032 12.8336L12.137 2.22708L11.0764 1.16641L0.469676 11.7729L1.53032 12.8336Z"
-                                    fill="white" />
-                            </svg>
-                        </button>
+                    <a href="https://wa.me/6285702750455" />
+                    <button class="button-primary me-1">Contact Us
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                            <path
+                                d="M12.3567 1.69675C12.3567 1.28254 12.0209 0.946749 11.6067 0.946744L4.85673 0.946666C4.44252 0.946661 4.10673 1.28244 4.10672 1.69666C4.10672 2.11087 4.4425 2.44666 4.85671 2.44667L10.8567 2.44674L10.8566 8.44673C10.8566 8.86095 11.1924 9.19674 11.6066 9.19674C12.0209 9.19675 12.3566 8.86097 12.3566 8.44675L12.3567 1.69675ZM1.53032 12.8336L12.137 2.22708L11.0764 1.16641L0.469676 11.7729L1.53032 12.8336Z"
+                                fill="white" />
+                        </svg>
+                    </button>
                     </a>
-                    <a href="{{ route('services') }}">
+                    <a href="#introduction">
                         <button class="button-secondary">Explore Now
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13"
+                                fill="none">
                                 <path
                                     d="M11.9634 11.3032C11.9634 11.7175 11.6276 12.0533 11.2134 12.0533L4.46342 12.0533C4.04921 12.0533 3.71342 11.7176 3.71341 11.3033C3.71341 10.8891 4.04919 10.5533 4.4634 10.5533L10.4634 10.5533L10.4633 4.55327C10.4633 4.13905 10.7991 3.80326 11.2133 3.80326C11.6275 3.80325 11.9633 4.13903 11.9633 4.55325L11.9634 11.3032ZM1.13701 0.166441L11.7437 10.7729L10.6831 11.8336L0.0763655 1.22711L1.13701 0.166441Z"
                                     fill="#041827" />
@@ -125,7 +126,9 @@
             <div class="row content-services">
                 <div class="col-md-6 order2">
                     <a href="{{ route('services.propertio') }}">
-                        <img src="{{ url('/img/propertio.png') }}" alt="" class="img-fluid">
+                        <center>
+                            <img src="{{ url('/img/propertio.png') }}" alt="" class="img-fluid">
+                        </center>
                     </a>
                 </div>
                 <div class="col-md-6 order1">
@@ -157,7 +160,9 @@
                 </div>
                 <div class="col-md-6 text-end">
                     <a href="{{ route('services.augmented-reality') }}">
-                        <img src="{{ url('/img/ar.png') }}" alt="" class="img-fluid">
+                        <center>
+                            <img src="{{ url('/img/ar.png') }}" alt="" class="img-fluid">
+                        </center>
                     </a>
                 </div>
             </div>
@@ -165,7 +170,9 @@
             <div class="row content-services">
                 <div class="col-md-6 order2">
                     <a href="{{ route('services.virtual-reality') }}">
-                        <img src="{{ url('/img/vr.png') }}" alt="" class="img-fluid">
+                        <center>
+                            <img src="{{ url('/img/vr.png') }}" alt="" class="img-fluid">
+                        </center>
                     </a>
                 </div>
                 <div class="col-md-6 order1">
@@ -198,7 +205,9 @@
 
                 <div class="col-md-6 text-end order2">
                     <a href="{{ route('services.mixed-reality') }}">
-                        <img src="{{ url('/img/mr.png') }}" alt="" class="img-fluid">
+                        <center>
+                            <img src="{{ url('/img/mr.png') }}" alt="" class="img-fluid">
+                        </center>
                     </a>
                 </div>
             </div>
@@ -279,27 +288,18 @@
             </div>
 
             <div class="row">
-
-                @foreach($portfolios->sortByDesc('created_at')->take(6) as $portfolio)
-                    <div class="col-md-4 frame">
-                        <a href="{{ route('portofolio.show', ['slug' => $portfolio->slug]) }}">
-                            <img src="{{ asset('storage/' . $portfolio->image) }}" alt="{{ $portfolio->title }}" class="img-fluid img-portofolio">
-                            <h3 class="title">{{ $portfolio->title }}</h3>
-                            <div class="reguler-text sub-title">
-                                {{ $portfolio->created_at->format('d F Y') }}
-                            </div>
-                        </a>
-                    </div>
+                @foreach($portfolios->sortByDesc('created_at') as $portfolio)
+                <div class="col-md-4 frame">
+                    <a href="{{ route('portofolio.show', ['slug' => $portfolio->slug]) }}">
+                        <img src="{{ asset('storage/' . $portfolio->thumbnail) }}" alt="{{ $portfolio->title }}"
+                            class="img-fluid img-portofolio">
+                        <h3 class="title">{{ $portfolio->title }}</h3>
+                        <div class="reguler-text sub-title">
+                            {{ $portfolio->created_at->format('d F Y') }}
+                        </div>
+                    </a>
+                </div>
                 @endforeach
-
-            </div>
-
-            <div class="button">
-                <a href="{{ route('portofolio.index') }}">
-                    <button>
-                        View More
-                    </button>
-                </a>
             </div>
         </div>
     </section>
@@ -310,10 +310,10 @@
                 Reviews
             </div>
             <h2 class="text-center">What They says</h2>
-                {{-- <div class="reguler-text text-center text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua.
-                </div> --}}
+            {{-- <div class="reguler-text text-center text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+            </div> --}}
             <div class="slider">
                 <div class="owl-carousel">
                     <div class="slider-card">
@@ -383,11 +383,11 @@
 
     <section id="contact">
         <div class="container">
-            <div class="contact">
+            <div class="card-contact">
                 <h2 class="text-contact">Ready to Bring Your Imagination to Life? Get in Touch with Us
                 </h2>
                 <a href="https://wa.me/6285702750455">
-                    <button class="button-secondary">Contact Us
+                    <button class="button-light">Contact Us
                         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
                             <path
                                 d="M12.5534 1.69675C12.5534 1.28254 12.2176 0.946749 11.8034 0.946744L5.05339 0.946666C4.63917 0.946661 4.30338 1.28244 4.30338 1.69666C4.30337 2.11087 4.63916 2.44666 5.05337 2.44667L11.0534 2.44674L11.0533 8.44673C11.0533 8.86095 11.3891 9.19674 11.8033 9.19674C12.2175 9.19675 12.5533 8.86097 12.5533 8.44675L12.5534 1.69675ZM1.72698 12.8336L12.3337 2.22708L11.2731 1.16641L0.666331 11.7729L1.72698 12.8336Z"
@@ -401,7 +401,7 @@
 
     <section>
         <footer>
-            <div class="container">
+            <div class="container footer-index">
                 <div class="row">
                     <div class="col-lg-4">
                         <img src="{{ url('/img/logo.svg') }}" alt="" class="mb-3">
@@ -448,7 +448,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="{{ url('/js/owl.carousel.min.js') }}"></script>
     <script src="{{ url('/js/script.js') }}"></script>
 </body>

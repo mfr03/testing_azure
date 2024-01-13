@@ -16,7 +16,7 @@
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
+            <a class="navbar-brand fw-bold" href="{{ route('home') }}">
                 <img src="{{ url('/img/logo.svg') }}" alt="Logo Cinurawa">
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
@@ -51,7 +51,7 @@
                     <div class="sub-heading">
                         Our Portofolio
                     </div>
-                    <div class="reguler-text  mb-3">
+                    <div class="reguler-text mb-3">
                         {{ $portofolio->created_at->format('d F Y') }}
                     </div>
                     <h1>
@@ -63,7 +63,8 @@
                 </div>
                 <div class="col-md-6 hero1 text-end">
                     <div class="hero-card">
-                        <img src="{{ asset('storage/' . $portofolio->image) }}" alt="{{ $portofolio->title }}" class="img-fluid rounded">
+                        <img src="{{ asset('storage/' . $portofolio->thumbnail) }}" alt="{{ $portofolio->title }}"
+                            class="img-fluid rounded">
                     </div>
                 </div>
             </div>
@@ -89,7 +90,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
-                        <img src="assets/img/logo.svg" alt="" class="mb-3">
+                        <img src="{{ url('/img/logo.svg') }}" alt="" class="mb-3">
                         <div class="reguler-text">
                             +62 857-0275-0455 <br>
                             cinurawa@gmail.com <br>
@@ -130,7 +131,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+        </script>
 </body>
 
 </html>

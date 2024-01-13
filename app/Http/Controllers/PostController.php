@@ -47,52 +47,51 @@ class PostController extends Controller
         return view('blog.blog-category', compact('posts', 'categories', 'categoryModel'));
     }
 
-
-
     public function showCategory($category)
-{
-    $categoryModel = Category::where('name', $category)->firstOrFail();
-    $posts = $categoryModel->posts()
-        ->where('is_published', true)
-        ->orderBy('created_at', 'desc')
-        ->get();
+    {
+        $categoryModel = Category::where('name', $category)->firstOrFail();
+        $posts = $categoryModel->posts()
+            ->where('is_published', true)
+            ->orderBy('created_at', 'desc')
+            ->get();
 
         foreach ($posts as $post) {
-            // Strip HTML tags and limit the content to 30 words
+            // Strip HTML tags and limit the content to 150 characters
             $contentWithoutTags = strip_tags($post->content);
-            $words = str_word_count($contentWithoutTags, 1);
-            $truncatedContent = implode(' ', array_slice($words, 0, 30));
-    
-            // Add "..." if the original content has more than 30 words
-            if (count($words) > 30) {
+            $truncatedContent = substr($contentWithoutTags, 0, 350);
+
+            // Add "..." if the original content has more than 150 characters
+            if (strlen($contentWithoutTags) > 150) {
                 $truncatedContent .= '...';
             }
-    
+
             // Replace the original content with the truncated and formatted version
             $post->content = $truncatedContent;
+        }
+
+        $categories = Category::distinct()->get();
+
+        return view('blog.blog-category', compact('posts', 'categories', 'categoryModel'));
     }
-
-    $categories = Category::distinct()->get();
-
-    return view('blog.blog-category', compact('posts', 'categories', 'categoryModel'));
-}
-
-
 
     public function search(Request $request)
     {
         $query = $request->input('query');
-
+    
         $posts = Post::with('category', 'tags')
             ->where('title', 'like', '%' . $query . '%')
+            ->orWhereHas('tags', function ($tagQuery) use ($query) {
+                $tagQuery->where('name', 'like', '%' . $query . '%');
+            })
             ->where('is_published', true)
             ->get();
-
+    
         $postCount = $posts->count();
-
+    
         $categories = Category::distinct()->get();
-
+    
         return view('blog.blog-search', compact('posts', 'categories', 'query', 'postCount'));
     }
+    
 
 }

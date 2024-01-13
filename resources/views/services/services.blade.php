@@ -14,7 +14,7 @@
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
+            <a class="navbar-brand fw-bold" href="{{ route('home') }}">
                 <img src="{{ url('/img/logo.svg') }}" alt="Logo Cinurawa">
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
@@ -72,17 +72,22 @@
                 <div class="row content-services">
                     <div class="col-md-6 order2">
                         <a href="{{ route('services.propertio') }}">
-                            <img src="{{ url('/img/propertio.png') }}" alt="" class="img-fluid">
+                            <center>
+                                <img src="{{ url('/img/propertio.png') }}" alt="" class="img-fluid">
+                            </center>
                         </a>
                     </div>
                     <div class="col-md-6 order1">
                         <a href="{{ route('services.propertio') }}">
                             <h3>Propertio</h3>
                             <div class="reguler-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed
                                 do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua. tempor incididunt ut labore et
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. tempor incididunt ut labore
+                                et
                                 dolore magna aliqua.
                             </div>
                         </a>
@@ -94,17 +99,22 @@
                         <a href="{{ route('services.augmented-reality') }}">
                             <h3>Augmented Reality</h3>
                             <div class="reguler-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed
                                 do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua. tempor incididunt ut labore et
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. tempor incididunt ut labore
+                                et
                                 dolore magna aliqua.
                             </div>
                         </a>
                     </div>
                     <div class="col-md-6 text-end">
                         <a href="{{ route('services.augmented-reality') }}">
-                            <img src="{{ url('/img/ar.png') }}" alt="" class="img-fluid">
+                            <center>
+                                <img src="{{ url('/img/ar.png') }}" alt="" class="img-fluid">
+                            </center>
                         </a>
                     </div>
                 </div>
@@ -112,17 +122,22 @@
                 <div class="row content-services">
                     <div class="col-md-6 order2">
                         <a href="{{ route('services.virtual-reality') }}">
-                            <img src="{{ url('/img/vr.png') }}" alt="" class="img-fluid">
+                            <center>
+                                <img src="{{ url('/img/vr.png') }}" alt="" class="img-fluid">
+                            </center>
                         </a>
                     </div>
                     <div class="col-md-6 order1">
                         <a href="{{ route('services.virtual-reality') }}">
                             <h3>Virtual Reality</h3>
                             <div class="reguler-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed
                                 do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua. tempor incididunt ut labore et
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. tempor incididunt ut labore
+                                et
                                 dolore magna aliqua.
                             </div>
                         </a>
@@ -134,10 +149,13 @@
                         <a href="{{ route('services.mixed-reality') }}">
                             <h3>Mixed Reality</h3>
                             <div class="reguler-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed
                                 do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua. tempor incididunt ut labore et
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. tempor incididunt ut labore
+                                et
                                 dolore magna aliqua.
                             </div>
                         </a>
@@ -145,7 +163,9 @@
 
                     <div class="col-md-6 text-end order2">
                         <a href="{{ route('services.mixed-reality') }}">
-                            <img src="{{ url('/img/mr.png') }}" alt="" class="img-fluid">
+                            <center>
+                                <img src="{{ url('/img/mr.png') }}" alt="" class="img-fluid">
+                            </center>
                         </a>
                     </div>
                 </div>
@@ -198,7 +218,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+        </script>
 </body>
 
 </html>

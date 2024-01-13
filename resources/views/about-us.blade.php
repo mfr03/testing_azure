@@ -16,7 +16,7 @@
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
+            <a class="navbar-brand fw-bold" href="{{ route('home') }}">
                 <img src="{{ url('/img/logo.svg') }}" alt="Logo Cinurawa">
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
@@ -161,7 +161,7 @@
         </div>
     </section>
 
-    <section>
+    <section class="pb-5">
         <div class="container">
             <div class="contact1">
                 <h2 class="text-contact1">Ready to Bring Your Imagination to Life? Get in Touch with Us
@@ -179,7 +179,7 @@
         </div>
     </section>
 
-    <section id="introduction">
+    <section id="gallery-name">
         <div class="container">
             <h2 class="text-center">Gallery</h2>
             <div class="reguler-text text-center text">
@@ -261,7 +261,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+        </script>
 </body>
 
 </html>
