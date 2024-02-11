@@ -50,17 +50,20 @@
     <section id="hero">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 hero-card hero1">
+                <div class="col-md-6 hero-card hero1 scroll1">
                     <h1>
                         Extraordinary imaginations come true
                     </h1>
                     <p>
-                        Present your property in the hands of the customer. Together we make extraordinary
-                        imaginations
-                        come true.
+                        Join CINURAWA, the pioneer in immersive technology, bringing digital wonders to the real world.
+                        Your brilliant ideas deserve realization. As passionate partners, we assist in crafting
+                        revolutionary experiences. <span class="hidden">With our immersive technology, turn your
+                            imagination into
+                            unforgettable reality.
+                        </span>
                     </p>
                     <a href="https://wa.me/6285702750455" />
-                    <button class="button-primary me-1">Contact Us
+                    <button class="button-primary me-3">Contact Us
                         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
                             <path
                                 d="M12.3567 1.69675C12.3567 1.28254 12.0209 0.946749 11.6067 0.946744L4.85673 0.946666C4.44252 0.946661 4.10673 1.28244 4.10672 1.69666C4.10672 2.11087 4.4425 2.44666 4.85671 2.44667L10.8567 2.44674L10.8566 8.44673C10.8566 8.86095 11.1924 9.19674 11.6066 9.19674C12.0209 9.19675 12.3566 8.86097 12.3566 8.44675L12.3567 1.69675ZM1.53032 12.8336L12.137 2.22708L11.0764 1.16641L0.469676 11.7729L1.53032 12.8336Z"
@@ -68,6 +71,7 @@
                         </svg>
                     </button>
                     </a>
+
                     <a href="#introduction">
                         <button class="button-secondary">Explore Now
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13"
@@ -79,7 +83,7 @@
                         </button>
                     </a>
                 </div>
-                <div class="col-md-6 hero2">
+                <div class="col-md-6 hero2 scroll3">
                     <div class="hero-card">
                         <img src="{{ url('/img/hero.png') }}" alt="Judul Profil" class="img-fluid">
                     </div>
@@ -90,170 +94,164 @@
 
     <section id="introduction">
         <div class="container">
-            <div class="sub-heading text-center">
-                Introduction
-            </div>
-            <h2 class="text-center">Who we are</h2>
-            <div class="reguler-text text-center text">
-                One of our products is the AR Property Project, which develops client Immersive applications in the
-                form of Augmented Reality applications in the property sector
+            <div class="scroll1">
+                <div class="sub-heading text-center">
+                    Introduction
+                </div>
+                <h2 class="text-center mb-3">Who we are</h2>
+                <div class="reguler-text text">
+                    CINURAWA is a leading innovator in the realm of immersive technology, dedicated to turning digital
+                    wonders into tangible reality. <span class="hidden">Our passion lies in making extraordinary ideas a
+                        reality, firmly
+                        believing that every great idea deserves to come to life.
+
+                        As enthusiastic partners, we collaborate closely with you to craft revolutionary experiences
+                        using
+                        cutting-edge immersive technology. Our team is not just a solution provider; we are your
+                        dedicated
+                        allies, guiding you step by step in bringing your visions to life.</span>
+                </div>
             </div>
 
-            <center>
-                <iframe width="888" height="514" src="https://www.youtube.com/embed/swK-sxvbXRI?si=Z3yF_Xkbk5QJgDP0"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-            </center>
+            <div class="row scroll4">
+                <div class="col-md-12 text-center">
+                    <iframe width="888" height="514" src="https://www.youtube.com/embed/swK-sxvbXRI?si=Z3yF_Xkbk5QJgDP0"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen class="mx-auto">
+                    </iframe>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <section id="services">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="sub-heading">
-                        Our Services
-                    </div>
-                    <h2>Sample of service header</h2>
-                    <div class="reguler-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.
-                    </div>
+            <div class="scroll1">
+                <div class="sub-heading text-center">
+                    Our Services
                 </div>
+                <h2 class="text-center">Turn Imagination into Reality with Us</h2>
             </div>
 
-            <div class="row content-services">
-                <div class="col-md-6 order2">
-                    <a href="{{ route('services.propertio') }}">
-                        <center>
-                            <img src="{{ url('/img/propertio.png') }}" alt="" class="img-fluid">
-                        </center>
-                    </a>
-                </div>
-                <div class="col-md-6 order1">
-                    <a href="{{ route('services.propertio') }}">
-                        <h3>Propertio</h3>
-                        <div class="reguler-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                            do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. tempor incididunt ut labore et
-                            dolore magna aliqua.
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="row content-services">
+            <div class="row content-services scroll4">
                 <div class="col-md-6">
                     <a href="{{ route('services.augmented-reality') }}">
                         <h3>Augmented Reality</h3>
                         <div class="reguler-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                            do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. tempor incididunt ut labore et
-                            dolore magna aliqua.
+                            Bring your products directly into customers' lives with real-time information and
+                            interactive guidance. <span class="hidden">Customers can virtually see and feel the products
+                                in their physical
+                                environment, providing an amazing experience and aiding them in making more confident
+                                decisions.</span>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-6 text-end">
-                    <a href="{{ route('services.augmented-reality') }}">
-                        <center>
-                            <img src="{{ url('/img/ar.png') }}" alt="" class="img-fluid">
-                        </center>
-                    </a>
+                    <center>
+                        <img src="{{ url('/img/ar.png') }}" alt="" class="img-fluid">
+                    </center>
                 </div>
             </div>
 
-            <div class="row content-services">
+            <div class="row content-services scroll3">
                 <div class="col-md-6 order2">
-                    <a href="{{ route('services.virtual-reality') }}">
-                        <center>
-                            <img src="{{ url('/img/vr.png') }}" alt="" class="img-fluid">
-                        </center>
-                    </a>
+                    <center>
+                        <img src="{{ url('/img/vr.png') }}" alt="" class="img-fluid">
+                    </center>
                 </div>
                 <div class="col-md-6 order1">
                     <a href="{{ route('services.virtual-reality') }}">
                         <h3>Virtual Reality</h3>
                         <div class="reguler-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                            do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. tempor incididunt ut labore et
-                            dolore magna aliqua.
+                            Embark on a captivating VR journey, from mesmerizing employee training to interactive
+                            product presentations. <span class="hidden"> Create an awe-inspiring and lifelike atmosphere
+                                at every step. With
+                                VR, your brilliant ideas transform into unforgettable experiences.</span>
                         </div>
                     </a>
                 </div>
             </div>
 
-            <div class="row content-services">
+            <div class="row content-services scroll4">
                 <div class="col-md-6 order1">
                     <a href="{{ route('services.mixed-reality') }}">
                         <h3>Mixed Reality</h3>
                         <div class="reguler-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                            do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. tempor incididunt ut labore et
-                            dolore magna aliqua.
+                            Enhance construction project efficiency by blending the virtual and real worlds. <span
+                                class="hidden"> Share
+                                product concepts directly with clients, creating a captivating experience and delivering
+                                tangible added value at every project stage. </span>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-md-6 text-end order2">
-                    <a href="{{ route('services.mixed-reality') }}">
-                        <center>
-                            <img src="{{ url('/img/mr.png') }}" alt="" class="img-fluid">
-                        </center>
+                    <center>
+                        <img src="{{ url('/img/mr2.png') }}" alt="" class="img-fluid">
+                    </center>
+                </div>
+            </div>
+
+            <div class="row content-services scroll3">
+                <div class="col-md-6 order2">
+                    <center>
+                        <img src="{{ url('/img/propertio.png') }}" alt="" class="img-fluid">
+                    </center>
+                </div>
+                <div class="col-md-6 order1">
+                    <a href="{{ route('services.propertio') }}">
+                        <h3>Propertio</h3>
                     </a>
+                    <div class="reguler-text">
+                        <a href="https://propertio.id/"><span style="color: #449eec;">Propertio.id</span></a>
+                        adalah sebuah aplikasi inovatif yang menyediakan solusi komprehensif di bidang
+                        properti <span class="hidden">, mencakup kebutuhan pencari properti, pelaku usaha properti,
+                            pembeli furnitur, </span> dan
+                        individu yang berencana untuk membangun atau merenovasi properti. <span class="hidden"> Aplikasi
+                            ini menyajikan
+                            berbagai fitur yang dirancang untuk memudahkan pengguna dalam menjalankan berbagai aspek
+                            yang terkait dengan dunia properti.</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="why">
-        <div class="container">
+        <div class="container scroll1">
             <h2 class="text-center">Why Choose Us</h2>
-            <div class="reguler-text text-center text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et
-                dolore magna aliqua.
-            </div>
-
             <div class="row mt-5">
                 <div class="col-md-4">
                     <div class="card-why">
-                        <img src="{{ url('/img/why.png') }}" alt="">
-                        <h3>First Reason</h3>
+                        <img src="{{ url('/img/why-choose/Leading-Expertise.png') }}" alt="">
+                        <h3>Leading Expertise</h3>
                         <div class="reguler-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
+                            Our team comprises experts in the field, ready to deliver outstanding solutions in immersive
+                            technology.
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="card-why">
-                        <img src="{{ url('/img/why.png') }}" alt="">
-                        <h3>First Reason</h3>
+                        <img src="{{ url('/img/why-choose/Boundless-Innovation.png') }}" alt="">
+                        <h3>Boundless Innovation</h3>
                         <div class="reguler-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
+                            We don't just follow trends; we create them. With CINURAWA, you become a part of the digital
+                            future.
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="card-why">
-                        <img src="{{ url('/img/why.png') }}" alt="">
-                        <h3>First Reason</h3>
+                        <img src="{{ url('/img/why-choose//Client-Commitment.png') }}" alt="">
+                        <h3>Client Commitment</h3>
                         <div class="reguler-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
+                            Client satisfaction is our top priority. We work closely with you to ensure every project
+                            reaches its full potential.
                         </div>
                     </div>
                 </div>
@@ -263,7 +261,7 @@
 
     <section id="portfolio">
         <div class="container">
-            <div class="row">
+            <div class="row scroll1">
                 <div class="col-md-8">
                     <div class="sub-heading">
                         Our Portfolio
@@ -281,14 +279,13 @@
                     </a>
                 </div>
 
-                <h2>Sample of portofolio header</h2>
+                <h2>Portfolio Showcase</h2>
                 <div class="reguler-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.
+                    Explore Our Diverse Range of Innovative Solutions
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row mb-3 scroll4">
                 @foreach($portfolios->sortByDesc('created_at') as $portfolio)
                 <div class="col-md-4 frame">
                     <a href="{{ route('portofolio.show', ['slug' => $portfolio->slug]) }}">
@@ -307,15 +304,15 @@
 
     <section id="reviews">
         <div class="container">
-            <div class="sub-heading text-center">
+            <div class="sub-heading text-center scroll1">
                 Reviews
             </div>
-            <h2 class="text-center">What They says</h2>
-            {{-- <div class="reguler-text text-center text">
+            <h2 class="text-center scroll1">What They says</h2>
+            <!-- <div class="reguler-text text-center text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua.
-            </div> --}}
-            <div class="slider">
+            </div> -->
+            <div class="slider scroll3">
                 <div class="owl-carousel">
                     <div class="slider-card">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -363,15 +360,17 @@
 
     <section id="reviews">
         <div class="container">
-            <div class="sub-heading text-center">
-                Our Partners
-            </div>
-            <h2 class="text-center">Sample Header</h2>
-            <div class="reguler-text text-center">
-                We’ve been working with teams around the world
+            <div class="scroll1">
+                <div class="sub-heading text-center">
+                    Our Partners
+                </div>
+                <h2 class="text-center">Research and Clients</h2>
+                <div class="reguler-text text-center">
+                    We’ve been working with teams around the world
+                </div>
             </div>
 
-            <div id="owl-demo" class="owl-carousel owl-theme">
+            <div id="owl-demo" class="owl-carousel owl-theme scroll3">
                 <img src="{{ url('/img/partner/bca.png') }}" alt="">
                 <img src="{{ url('/img/partner/grab.png') }}" alt="">
                 <img src="{{ url('/img/partner/blibli.png') }}" alt="">
@@ -383,7 +382,7 @@
     </section>
 
     <section id="contact">
-        <div class="container">
+        <div class="container scroll1">
             <div class="card-contact">
                 <h2 class="text-contact">Ready to Bring Your Imagination to Life? Get in Touch with Us
                 </h2>
@@ -401,48 +400,7 @@
     </section>
 
     <section>
-        <footer>
-            <div class="container footer-index">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <img src="{{ url('/img/logo.svg') }}" alt="" class="mb-3">
-                        <div class="reguler-text">
-                            +62 857-0275-0455 <br>
-                            cinurawa@gmail.com <br>
-                            info.cinurawa@gmail.com
-                        </div>
-                        <div class="medsos">
-                            <a href="https://www.facebook.com/">
-                                <img src="{{ url('/img/icon-medsos/facebook.svg') }}" alt="" class="icon-medsos">
-                            </a>
-                            <a href="https://twitter.com/BirawaCitra">
-                                <img src="{{ url('/img/icon-medsos/twitter.svg') }}" alt="" class="icon-medsos">
-                            </a>
-
-                            <a href="https://www.instagram.com/cinurawa.id/">
-                                <img src="{{ url('/img/icon-medsos/instagram.svg') }}" alt="" class="icon-medsos">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <h3>Our Address</h3>
-                        <div class="reguler-text mt-24">
-                            Teaching Industry Learning Center UGM, <br> Sleman, Daerah Istimewa Yogyakarta <br>
-                            55281
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-24">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.1510599545036!2d110.36996687464045!3d-7.773801877118019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59a883bb28fb%3A0x71c2d1a3cabf9775!2sTeaching%20Industry%20Learning%20Center%20(TILC-UGM)!5e0!3m2!1sid!2sid!4v1695021286547!5m2!1sid!2sid"
-                            width="100%" height="100%" style="border: 1px;;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        @include("layout.footer")
     </section>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -452,6 +410,8 @@
         </script>
     <script src="{{ url('/js/owl.carousel.min.js') }}"></script>
     <script src="{{ url('/js/script.js') }}"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="{{ url('/js/scroll-reveal.js') }}"></script>
 </body>
 
 </html>

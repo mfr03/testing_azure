@@ -46,13 +46,13 @@
     </nav>
 
     <section id="hero">
-        <div class="container bg-hero-blog hero-services">
+        <div class="container bg-hero-blog hero-services scroll1">
             <div class="sub-heading-blog">Our Blog</div>
             <h1 class="text-center">Explore Our <span class="insight">Insights</span></h1>
         </div>
     </section>
 
-    <section id="search" class="search-blog">
+    <section id="search" class="search-blog scroll2">
         <div class="container">
             <div class="row search-container">
                 <div class="col-md-8">
@@ -88,8 +88,8 @@
 
     <section id="blog-content">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-6">
+            <div class="row ">
+                <div class="col-md-6 col-6 scroll1">
                     <a href="{{ route('blog.latest') }}">
                         <h2 class="mb-1">Latest</h2>
                     </a>
@@ -106,7 +106,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row scroll2">
                 @foreach($posts->sortByDesc('created_at')->where('is_published', true)->take(3) as $post)
                     <div class="col-md-4 mt-5">
                         <a href="{{ route('blog.show', ['slug' => $post->slug]) }}">
@@ -115,19 +115,19 @@
 
                         <a href="{{ route('blog.category', ['category' => $post->category->name]) }}">
                             @if($post->category && $post->category->name == 'Property')
-                                <img src="{{ url('/img/blogs/property-label.png') }}" alt="" class="img-blog-label mt-24">
+                                <img src="{{ url('/img/blogs/property-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                             @elseif($post->category && $post->category->name == 'Financial')
-                                <img src="{{ url('/img/blogs/financial-label.png') }}" alt="" class="img-blog-label mt-24">
+                                <img src="{{ url('/img/blogs/financial-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                             @elseif($post->category && $post->category->name == 'Architecture')
-                                <img src="{{ url('/img/blogs/architecture-label.png') }}" alt="" class="img-blog-label mt-24">
+                                <img src="{{ url('/img/blogs/architecture-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                             @elseif($post->category && $post->category->name == 'Creativity')
-                                <img src="{{ url('/img/blogs/creativity-label.png') }}" alt="" class="img-blog-label mt-24">
+                                <img src="{{ url('/img/blogs/creativity-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                             @elseif($post->category && $post->category->name == 'Lifestyle')
-                                <img src="{{ url('/img/blogs/lifestyle-label.png') }}" alt="" class="img-blog-label mt-24">
+                                <img src="{{ url('/img/blogs/lifestyle-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                             @elseif($post->category && $post->category->name == 'Culture')
-                                <img src="{{ url('/img/blogs/culture-label.png') }}" alt="" class="img-blog-label mt-24">
+                                <img src="{{ url('/img/blogs/culture-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                             @else
-                                <img src="{{ url('/img/blogs/property-label.png') }}" alt="" class="img-blog-label">
+                                <img src="{{ url('/img/blogs/property-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                             @endif
                         </a>
 
@@ -150,7 +150,7 @@
     @endphp
     @if($publishedPosts->count() > 0)
         <section id="blog-content">
-            <div class="container">
+            <div class="container pb-5 scroll1">
                 <div class="row">
                     <div class="col-md-6 col-6">
                         <a href="{{ route('blog.category', ['category' => $category->name]) }}">
@@ -178,19 +178,19 @@
 
                             <a href="{{ route('blog.category', ['category' => $post->category->name]) }}">
                                 @if($post->category && $post->category->name == 'Property')
-                                    <img src="{{ url('/img/blogs/property-label.png') }}" alt="" class="img-blog-label mt-24">
+                                    <img src="{{ url('/img/blogs/property-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                                 @elseif($post->category && $post->category->name == 'Financial')
-                                    <img src="{{ url('/img/blogs/financial-label.png') }}" alt="" class="img-blog-label mt-24">
+                                    <img src="{{ url('/img/blogs/financial-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                                 @elseif($post->category && $post->category->name == 'Architecture')
-                                    <img src="{{ url('/img/blogs/architecture-label.png') }}" alt="" class="img-blog-label mt-24">
+                                    <img src="{{ url('/img/blogs/architecture-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                                 @elseif($post->category && $post->category->name == 'Creativity')
-                                    <img src="{{ url('/img/blogs/creativity-label.png') }}" alt="" class="img-blog-label mt-24">
+                                    <img src="{{ url('/img/blogs/creativity-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                                 @elseif($post->category && $post->category->name == 'Lifestyle')
-                                    <img src="{{ url('/img/blogs/lifestyle-label.png') }}" alt="" class="img-blog-label mt-24">
+                                    <img src="{{ url('/img/blogs/lifestyle-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                                 @elseif($post->category && $post->category->name == 'Culture')
-                                    <img src="{{ url('/img/blogs/culture-label.png') }}" alt="" class="img-blog-label mt-24">
+                                    <img src="{{ url('/img/blogs/culture-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                                 @else
-                                    <img src="{{ url('/img/blogs/property-label.png') }}" alt="" class="img-blog-label">
+                                    <img src="{{ url('/img/blogs/property-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                                 @endif
                             </a>
 
@@ -211,19 +211,19 @@
 
                             <a href="{{ route('blog.category', ['category' => $post->category->name]) }}">
                                 @if($post->category && $post->category->name == 'Property')
-                                    <img src="{{ url('/img/blogs/property-label.png') }}" alt="" class="img-blog-label mt-24">
+                                    <img src="{{ url('/img/blogs/property-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                                 @elseif($post->category && $post->category->name == 'Financial')
-                                    <img src="{{ url('/img/blogs/financial-label.png') }}" alt="" class="img-blog-label mt-24">
+                                    <img src="{{ url('/img/blogs/financial-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                                 @elseif($post->category && $post->category->name == 'Architecture')
-                                    <img src="{{ url('/img/blogs/architecture-label.png') }}" alt="" class="img-blog-label mt-24">
+                                    <img src="{{ url('/img/blogs/architecture-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                                 @elseif($post->category && $post->category->name == 'Creativity')
-                                    <img src="{{ url('/img/blogs/creativity-label.png') }}" alt="" class="img-blog-label mt-24">
+                                    <img src="{{ url('/img/blogs/creativity-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                                 @elseif($post->category && $post->category->name == 'Lifestyle')
-                                    <img src="{{ url('/img/blogs/lifestyle-label.png') }}" alt="" class="img-blog-label mt-24">
+                                    <img src="{{ url('/img/blogs/lifestyle-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                                 @elseif($post->category && $post->category->name == 'Culture')
-                                    <img src="{{ url('/img/blogs/culture-label.png') }}" alt="" class="img-blog-label mt-24">
+                                    <img src="{{ url('/img/blogs/culture-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                                 @else
-                                    <img src="{{ url('/img/blogs/property-label.png') }}" alt="" class="img-blog-label">
+                                    <img src="{{ url('/img/blogs/property-label.png') }}" alt="" class="img-blog-label mt-3 mb-3">
                                 @endif
                             </a>
 
@@ -234,60 +234,20 @@
                         </div>
                     @endforeach
                 </div>
-
             </div>
         </section>
         @endif
     @endforeach
 
-
     <section>
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <img src="{{ url('/img/logo.svg') }}" alt="" class="mb-3">
-                        <div class="reguler-text">
-                            +62 857-0275-0455 <br>
-                            cinurawa@gmail.com <br>
-                            info.cinurawa@gmail.com
-                        </div>
-                        <div class="medsos">
-                            <a href="https://www.facebook.com/">
-                                <img src="{{ url('/img/icon-medsos/facebook.svg') }}" alt="" class="icon-medsos">
-                            </a>
-                            <a href="https://twitter.com/BirawaCitra">
-                                <img src="{{ url('/img/icon-medsos/twitter.svg') }}" alt="" class="icon-medsos">
-                            </a>
-                            <a href="https://www.instagram.com/cinurawa.id/">
-                                <img src="{{ url('/img/icon-medsos/instagram.svg') }}" alt="" class="icon-medsos">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <h3>Our Address</h3>
-                        <div class="reguler-text mt-24">
-                            Teaching Industry Learning Center UGM, <br> Sleman, Daerah Istimewa Yogyakarta <br>
-                            55281
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-24">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.1510599545036!2d110.36996687464045!3d-7.773801877118019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59a883bb28fb%3A0x71c2d1a3cabf9775!2sTeaching%20Industry%20Learning%20Center%20(TILC-UGM)!5e0!3m2!1sid!2sid!4v1695021286547!5m2!1sid!2sid"
-                            width="100%" height="100%" style="border: 1px;;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        @include("layout.footer")
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="{{ url('/js/scroll-reveal.js') }}"></script>
 </body>
 
 </html>
